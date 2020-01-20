@@ -1,0 +1,22 @@
+{
+  "name": "gss-game-calc",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "gas": "webpack --config webpack.gas.js ",
+    "deploy": "npm run gas && cd dist && clasp push"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-private-methods": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "core-js": "3"
+  }
+}
