@@ -45,7 +45,7 @@ The `In-Stock` section. Since we may already have some resources at our disposal
 
 #### Resources
 
-Finally the `Reply/Resources` section is the result of calculations. It looks similar to the `Blueprints` section but lists only *required* crafts with the *requested* amounts. 
+Finally the `Result/Resources` section is the result of calculations. It looks similar to the `Blueprints` section but lists only *required* crafts with the *requested* amounts. 
 
 The list is sorted by the number of components in a recipe in the reverse order: the most complex crafts are at the top, while *final* components (i.e. w/o child components) are at the bottom.
 
