@@ -25,7 +25,7 @@ The `Request` contains three sections:
 
 #### Blueprints 
 
-Each `Blueprints` row is a recipe. A recipe is a list of pairs. The first pair is the target of the craft, it say *what* we get and *how much* we get. The other pairs are ingredients in the same form: names and amounts.
+Each `Blueprints` row is a recipe. A recipe is a list of pairs. The first pair is the target of the craft, it says *what* we get and *how much* we get. The other pairs are ingredients in the same form: names and amounts.
 
 > In our example the first recipe says: to produce 1 `Table` component or resource you need 1 `Table Top` component plus 4 `Table Leg` components. In their turn, to craft 1 `Table Top` you need 12 `Wooden Plank`s  and to make 1 `Table Leg` you need 2 `Wooden Bar`s. Items w/o recipe are considered *final*, e.g.: `Wooden Plan` and `Wooden Bar`.
 
