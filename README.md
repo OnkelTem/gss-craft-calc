@@ -27,17 +27,17 @@ The `Request` contains three sections:
 
 Each `Blueprints` row is a recipe. A recipe is a list of pairs. The first pair is the target of the craft, it says *what* we get and *how much* we get. The other pairs are ingredients in the same form: names and amounts.
 
-> In our example the first recipe says: to produce 1 `Table` component or resource you need 1 `Table Top` component plus 4 `Table Leg` components. In their turn, to craft 1 `Table Top` you need 12 `Wooden Plank`s  and to make 1 `Table Leg` you need 2 `Wooden Bar`s. Items w/o recipe are considered *final*, e.g.: `Wooden Plan` and `Wooden Bar`.
+> In our example the first recipe says: to produce 1 `Table` component or resource we need 1 `Table Top` component plus 4 `Table Leg` components. In their turn, to craft 1 `Table Top` we need 12 `Wooden Plank`s  and to make 1 `Table Leg` we need 2 `Wooden Bar`s. Items w/o recipe are considered *final*, e.g.: `Wooden Plak` and `Wooden Bar`.
 
 #### Crafts
 
-The `Crafts` section is the essence of what you're gonna craft and calculate. It's just a two-columns list of names and amounts. 
+The `Crafts` section is the essence of what we're gonna craft and calculate. It's just a two-columns list of names and amounts. 
 
 > In this example we want to get a furniture set with 1 `Table` and 4 `Chair`s.
 
 #### In-Stock
 
-The `In-Stock` section. Since you may already have some resources at your disposal (e.g. crafted before), you can list them here. Similarly to the previous section, you list here pairs: names and amounts. 
+The `In-Stock` section. Since we may already have some resources at our disposal (e.g. crafted before), we can list them here. Similarly to the previous section, we list here pairs: names and amounts. 
 
 > In our exmaple we already have 3 `Wooden Plank`s and 2 `Wooden Bar`s.
 
