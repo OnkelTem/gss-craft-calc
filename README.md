@@ -62,6 +62,7 @@ Here are few recipes from a highly powerfull Minecraft addon: **Industrial Craft
 ![screenshot-docs google com-2020 01 21-09_36_58](https://user-images.githubusercontent.com/114060/72781138-a48d2900-3c31-11ea-94ec-2b34522ce72d.png)
 
 I think the output is self-explanatory so won't go into any details.
+Source: https://wiki.industrial-craft.net/
 
 ### Other games
 
