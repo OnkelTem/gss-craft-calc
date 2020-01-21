@@ -1,11 +1,11 @@
 /**
  * @typedef {object} AppLib
- * @property {function} calcResources
+ * @property {function} craftCalc
  */
 
 // noinspection JSClosureCompilerSyntax
 /**
- * Calculates required resources based on a blueprints database and an amount of existing resources.
+ * Calculates required craft resources based on a blueprints database and an amount of existing resources.
  *
  * @param {blueprints!A2:H9}  blueprints  The blueprints database in the format: ResourceName|Amount [ResourceName|Amount, ...]
  * @param {A2:B3}             request     The list of requested resources in the format: ResourceName|Amount
@@ -13,14 +13,14 @@
  * @return The resource requirements table
  * @customfunction
  */
-function gameCalc(blueprints, request, existing) {
-  return AppLib.calcResources(blueprints, request, existing);
+function craftCalc(blueprints, request, existing) {
+  return AppLib.craftCalc(blueprints, request, existing);
 }
 
 // noinspection JSUnusedGlobalSymbols
-function testGameCalc() {
+function testCraftCalc() {
   // For testing we use data from https://wiki.industrial-craft.net/
-  gameCalc(
+  craftCalc(
     // blueprints
     [
       ["Electronic Circuit",     1, "Insulated Copper Cable", 6, "Redstone",        2, "Iron Plate", 2],
@@ -32,6 +32,7 @@ function testGameCalc() {
       ["Copper Plate",           1, "Copper Ingot",           1],
       ["Iron Plate",             1, "Iron Ingot",             1],
       ["Tin Plate",              1, "Tin Ingot",              1],
+      ["Rubber",                 1, "Resin",                  1],
     ],
     // request
     [

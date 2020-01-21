@@ -152,7 +152,7 @@ class Defs {
 }
 
 // noinspection JSUnusedGlobalSymbols
-export function calcResources(blueprints, request, existing) {
+export function craftCalc(blueprints, request, existing) {
   // Check params
   if (blueprints == null || blueprints.length === 0) {
     throw new Error("Blueprints database is empty, nothing to do, existing.");
