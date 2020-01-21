@@ -1,7 +1,7 @@
 class Defs {
 
   #defs = [];
-  #remainders = [];
+  #remainders = {};
 
   constructor(blueprints) {
     this.#defs = this.#readDefs(blueprints);
@@ -66,54 +66,19 @@ class Defs {
     }
   }
 
-  /**
-   * Returns remainder by resource name
-   * @param name
-   * @returns {boolean|*}
-   */
-  #remainderByName(name) {
-    const res = this.#remainders.filter(function(el) {
-      return el.name === name;
-    });
-    if (res.length > 0) {
-      return res[0];
-    }
-    else {
-      return false;
-    }
-  }
-
-  #addRemainder(name, remainder) {
-    this.#remainders.push({name, remainder});
-  }
-
-  /**
-   * Sets remainder of a resource
-   * @param name
-   * @param remainder The amount of a remainder
-   */
-  #setRemainder(name, remainder) {
-    if (this.#remainderByName(name) !== false) {
-      this.#remainders.forEach(function (el) {
-        if (el.name === name) {
-          el.remainder = remainder;
-        }
-      });
-    }
-    else {
-      this.#addRemainder(name, remainder);
-    }
-  }
-
   calculate(request, existing) {
     let results = [];
     Defs.#validateInput(request);
     Defs.#validateInput(existing);
     for (let i = 0; i < existing.length; i++) {
-      this.#addRemainder(existing[i][0], existing[i][1]);
+      if (existing[i][1] > 0) {
+        this.#remainders[existing[i][0]] = existing[i][1];
+      }
     }
     for (let i = 0; i < request.length; i++) {
-      results = results.concat(this.#calculateInternal(request[i][0], request[i][1]));
+      if (request[i][1] > 0) {
+        results = results.concat(this.#calculateInternal(request[i][0], request[i][1]));
+      }
     }
     const aggregatedResults = [];
     for (let i = 0; i < results.length; i++) {
@@ -150,23 +115,19 @@ class Defs {
 
     // Get the blueprint
     const def = this.#defByName(name);
-    const result = def ? {...def} : {name: name, multiplier: 1, children: [], leaf: true};
+    const result = def ? {...def} : {name: name, multiplier: 1, children: []};
 
     // Use the remainder if we have it
-    const remainder = this.#remainderByName(name);
-    if (remainder.remainder > 0) {
-      if (amount > remainder.remainder) {
-        amount = amount - remainder.remainder;
-        this.#setRemainder(name, 0);
+    const rem = this.#remainders[name];
+    if (rem != null && rem > 0) {
+      if (amount > rem) {
+        amount = amount - rem;
+        this.#remainders[name] = 0;
       }
       else {
+        this.#remainders[name] = rem - amount;
         amount = 0;
-       this.#setRemainder(name, remainder.remainder - amount);
       }
-    }
-
-    if (amount === 0) {
-      return [];
     }
 
     const factor = Math.ceil(amount / result.multiplier);
@@ -177,10 +138,10 @@ class Defs {
     }));
     results.push(result);
 
-    // Check if we have have remainders
-    if (amount % result.multiplier !== 0) {
+    // Check if we have have any remainders
+    if (result.multiplier > 0 && amount % result.multiplier !== 0) {
       // Place the remainder in the buffer
-      this.#remainders.push({name: name, remainder: result.multiplier - amount});
+      this.#remainders[name] = result.multiplier - amount;
     }
 
     return results.concat(...result.children.map(el =>
@@ -188,11 +149,9 @@ class Defs {
     ));
   }
 
-  defs() {
-    return this.#defs;
-  }
 }
 
+// noinspection JSUnusedGlobalSymbols
 export function calcResources(blueprints, request, existing) {
   // Check params
   if (blueprints == null || blueprints.length === 0) {
