@@ -1,6 +1,6 @@
 # Craft Calculator for Google Spreadsheets
 
-Implements Google Spreadsheets extension function `=craftCalc()` for calculating resources required for crafts in games.
+Implements a Google Spreadsheets extension function `=craftCalc()` for calculating resources required for crafts in games.
 
 It's totally game agnostic so you can use it for ANY game with crafting.
 
