@@ -77,5 +77,7 @@ Evident advantage of this calculator: flexibility and ease-of-use. It allows you
 
 Cons are clear two: it's a manual job. From the other hand, once created a database can be shared or reused. So feel free to create one and share with others.
 
-Ok, I'm tired of writing this README.md, now back to my work.
+## TODO
 
+* Add this function to the Google Marketplace, so that you could install right away from the Google Shpreadsheets IU.
+* Provide live examples.
