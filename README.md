@@ -79,7 +79,7 @@ Cons are clear two: it's a manual job. From the other hand, once created a datab
 
 ## TODO
 
-* Add this function to the Google Marketplace, so that you could install right away from the Google Shpreadsheets IU.
+* Add this function to the Google Marketplace, so that you could find and install it from the Google Shpreadsheets IU.
 * Provide live examples.
 
 ## Feedback
