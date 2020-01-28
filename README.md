@@ -73,9 +73,9 @@ Off the top of my head I can recall *Witcher 3* for example. No, not that part w
 
 ## Pros and cons
 
-Evident advantage of this calculator: flexibility and ease-of-use. It allows you to be *focused*: you don't need to list ALL the recipes with their details. Instead you list only those recipes that you really need and skip some obvious ones.
+Evident advantage of this calculator: flexibility and ease-of-use. It allows you to be *focused*: you don't need to list each and every recipe. Instead you narrow the list down to the most important items, to a degree when you're not overloaded with a bunch of unnecessary details.
 
-Cons are clear two: it's a manual job. From the other hand, once created a database can be shared. So feel free to create one and share with others.
+Cons are clear two: it's a manual job. From the other hand, once created a database can be shared or reused. So feel free to create one and share with others.
 
 Ok, I'm tired of writing this README.md, now back to my work.
 
