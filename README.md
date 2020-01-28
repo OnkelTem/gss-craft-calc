@@ -82,6 +82,6 @@ Cons are clear two: it's a manual job. From the other hand, once created a datab
 * Add this function to the Google Marketplace, so that you could install right away from the Google Shpreadsheets IU.
 * Provide live examples.
 
-# Contact me
+## Feedback
 
 If you have any questions or suggestions don't hesitate to share them via **Issues** or mail me: aneganov@gmail.com
