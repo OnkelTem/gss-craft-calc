@@ -66,9 +66,9 @@ Source: https://wiki.industrial-craft.net/
 
 ### Other games
 
-I don't play that often since I have a job and a family and damn - I'm a big boy! - yet I see cleary WHERE and HOW one could use this calculator. 
+I don't play that often since I have a job and a family and damn - I'm a big boy! - yet I see cleary *when* and *how* one can use this calculator. 
 
-Off the top of my head I can recall *Witcher 3* for example. No, no that part were you grind creepers or have sex with Yeniffer. I mean crafing good suites.
+Off the top of my head I can recall *Witcher 3* for example. No, not that part when you grind creepers or have sex with Yeniffer. I mean crafing good suites.
 
 
 ## Pros and cons
