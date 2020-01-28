@@ -55,7 +55,7 @@ The list is sorted by the number of components in a recipe in the reverse order:
 
 ### Minecraft / Industrial Craft 2 (IC²)
 
-Obviously, a very good example of `=gameCalc()` application is the Minecraft game itself. As a matter of fact, I created this calculator playing Minecraft :) I haven't created any more of less full database of Minecraft recipes (that would be a tough task!), yet I already use it. 
+Obviously, a very good example of `=craftCalc()` usage is the Minecraft game itself. As a matter of fact, I created this calculator playing Minecraft :) I haven't created any more of less full database of Minecraft recipes (that would be a tough task!), yet I already use it. 
 
 Here are few recipes from a highly powerfull Minecraft addon: **Industrial Craft 2**:
 
